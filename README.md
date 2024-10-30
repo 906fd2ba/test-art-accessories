@@ -2,6 +2,9 @@
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Deployed on Github Pages
+https://906fd2ba.github.io/test-art-accessories/
+
 ## Тестовое задание
 https://helloworldbackey.storage.yandexcloud.net/task.zip
 
