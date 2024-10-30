@@ -7,4 +7,6 @@ export default defineNuxtConfig({
     baseURL: '/test-art-accessories/', // baseURL: '/<repository>/'
     buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
   },
+  ssr: false,
+  target: 'static',
 })
