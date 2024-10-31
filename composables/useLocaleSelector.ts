@@ -23,10 +23,10 @@ export const locales: Locale[] = [
 
 export const [ defaultLocale ] = locales;
 
-export default (list: LocaleList = {}) => {
+export default (defList: LocaleList = {}) => {
     const locale: Ref<Locale> = useState('locale', () => defaultLocale);
 
-    const getLocalizedString = (prop: string): string => {
+    const getLocalizedString = (prop: string, list: LocaleList = defList): string => {
         const val = list[locale.value.id]?.[prop];
         const [ _, fallback ] = Object.entries(list).find(([ _, loc ]) => loc[prop]) || [];
         return val ?? fallback?.[prop] ?? '';
