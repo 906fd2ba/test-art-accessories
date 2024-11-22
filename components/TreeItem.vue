@@ -6,14 +6,14 @@ const { item } = defineProps({
 
 const { getLocalizedString } = useLocaleSelector(item.locale);
 
-const name: ComputedRef<string> = computed(() => getLocalizedString('cg_name'));
-const desc: ComputedRef<string> = computed(() => getLocalizedString('cg_description'));
-const link: ComputedRef<string> = computed(() => '/' + getLocalizedString('link') + item.id);
+const name = computed<string>(() => getLocalizedString('cg_name'));
+const desc = computed<string>(() => getLocalizedString('cg_description'));
+const link = computed<string>(() => '/' + getLocalizedString('link') + item.id);
 
 // const childrenCount: number = item.numchild || 0; // некорректно подсчитано в двух местах (id 7 и 12)
 const childrenCount: number = item.childs?.length || 0;
 
-const expanded: Ref<boolean> = ref(false);
+const expanded = ref<boolean>(false);
 </script>
 
 <template>

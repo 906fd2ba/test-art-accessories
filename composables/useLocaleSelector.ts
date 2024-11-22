@@ -24,7 +24,7 @@ export const locales: Locale[] = [
 export const [ defaultLocale ] = locales;
 
 export default (defList: LocaleList = {}) => {
-    const locale: Ref<Locale> = useState('locale', () => defaultLocale);
+    const locale = useState<Locale>('locale', () => defaultLocale);
 
     const getLocalizedString = (prop: string, list: LocaleList = defList): string => {
         const val = list[locale.value.id]?.[prop];
